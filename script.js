@@ -12,22 +12,22 @@ function challenged() {
     userChoice = userChoice.toUpperCase();
 
     if (userChoice == computerChoice) {
-        alert("tie");
+        alert("Tie!");
         tie++;
     } else if
         ((userChoice == "R" && computerChoice == "S") ||
         (userChoice == "P" && computerChoice == "R") ||
         (userChoice == "S" && computerChoice == "P")) {
-        alert("win")
+        alert("You won!")
         win++;
     } else {
-        alert("loss")
+        alert("You lost!")
         lose++;
     }
-    alert("Stats:" + newLine 
-    + "Win: " + win + newLine
-    + "Loss: " + lose + newLine
-    + "Tie: " + tie + newLine)
+    alert("Stats:" + newLine
+        + "Win: " + win + newLine
+        + "Loss: " + lose + newLine
+        + "Tie: " + tie + newLine)
 
     if (confirm("Do you want to play again?")) {
         challenged();
