@@ -5,11 +5,16 @@ var win = 0,
 
 function challenged() {
     alert("You have been challenged to Rock, Paper, Scissors by the website!");
+    game();
+}
+
+function game() {
     var possibleMoves = ["R", "P", "S"];
-    var userChoice = prompt("Choose your move! R - Rock | P - Paper | S - Scissors", "R, P, or S");
+    var userChoice = prompt("Choose your move! R - Rock | P - Paper | S - Scissors." + newLine
+        + "Invalid entries will default to a loss.", "R, P, or S");
+    userChoice = userChoice.toUpperCase();
     var computerChoice = possibleMoves[randomChoice(possibleMoves)];
     alert("The computer chose " + computerChoice);
-    userChoice = userChoice.toUpperCase();
 
     if (userChoice == computerChoice) {
         alert("Tie!");
@@ -30,7 +35,7 @@ function challenged() {
         + "Tie: " + tie + newLine)
 
     if (confirm("Do you want to play again?")) {
-        challenged();
+        game();
     }
 }
 
